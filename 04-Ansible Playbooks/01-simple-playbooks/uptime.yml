@@ -1,0 +1,10 @@
+---
+ - name: How to use debug module
+   hosts: group1
+   tasks:
+   - name: Memory info
+     shell: df -h
+     register: results
+
+   - debug:
+     var: results
